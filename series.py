@@ -38,3 +38,18 @@ def lucas(n):
         return 1
 
     return lucas(n-1) + lucas(n-2)
+
+def sum_series(n, op1 = 0, op2 = 1):
+
+    #base case
+    if (n == 0 or n == 1) and op1 == 0 and op2 == 1:
+        return n
+
+    if n == 0 and op1 == 2 and op2 == 1:
+        return 2
+
+    # if n == 1 and op1 == 2 and op2 == 1:
+    #     return 1
+
+
+    return sum_series(n-1) + sum_series(n-2)
