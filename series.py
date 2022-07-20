@@ -48,8 +48,10 @@ def sum_series(n, op1 = 0, op2 = 1):
     if n == 0 and op1 == 2 and op2 == 1:
         return 2
 
-    # if n == 1 and op1 == 2 and op2 == 1:
-    #     return 1
+    if n == 1 and op1 == 2 and op2 == 1:
+        return 1
 
+    if op1 == 2 and op2 == 1:
+        return sum_series(n-1, 2, 1) + sum_series(n-2, 2, 1)
 
     return sum_series(n-1) + sum_series(n-2)
