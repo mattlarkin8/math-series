@@ -40,6 +40,15 @@ def lucas(n):
     return lucas(n-1) + lucas(n-2)
 
 def sum_series(n, op1 = 0, op2 = 1):
+    """
+    Function is designed to work with numbers sequences that follow the same rules as fibonacci and lucas.
+    Optional parameters default to fibonacci sequence. The optional params are used to set the starting two
+    values in the number sequence. Ex: op1=2, op2=1 will return the lucas numbers.
+    :param n:
+    :param op1:
+    :param op2:
+    :return: nth value in either fibonacci or lucas sequence based on optional param values
+    """
 
     #base case
     if (n == 0 or n == 1) and op1 == 0 and op2 == 1:
